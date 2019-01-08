@@ -1,9 +1,10 @@
 const car = require("../models/car");
 
-exports.addCar = function(conditions, dbHelpers, callback) {
+exports.addCar = function(conditions, dbHelpers ) {
+    console.log("aaaa-----");
     const carModal = car.getModel();
-    dbHelpers.add(carModal, conditions).then(function(result){
-        callback(result);
+    dbHelpers.add(carModal, conditions).then(function(){
+        console.log("存储数据成功！");
     })
 }
 

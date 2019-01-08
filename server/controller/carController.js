@@ -2,12 +2,8 @@ const dbHelper = require("../dbHelper/dbHelper");
 const carDao = require("../dbSql/carDao");
 
 exports.addCarAction = function(carobj) {
-  console.log(carobj);
-  return function(req, res) {
-      carDao.addCar(carObj,dbHelper,function(result){
-        res.json(result);
-    });
-  }
+  console.log("carobj111",carobj);
+  carDao.addCar(carObj,dbHelper);
 }
 
 exports.getCarListAction = function() {

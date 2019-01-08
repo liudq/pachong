@@ -51,7 +51,7 @@ const routes = (app) => {
             items.forEach(element => {
               carController.addCarAction(element); 
             });
-            carController.getCarListAction();
+            // carController.getCarListAction();
             // fs.access(path.join(__dirname, '/img.json'), fs.constants.F_OK, err => {
             //   // 文件不存在
             //     if (err) { 

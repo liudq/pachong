@@ -1,7 +1,8 @@
 // 添加数据到db库
 exports.add = function (model, conditions) {
+  console.log(model);
   return new Promise(function(resolve,reject){
-    model.create(conditions, function(err, result) {
+    model.save(conditions, function(err, result) {
       if (err) {
         console.log("dbHelper add:", err);
         reject({success: 0, message: err, data: {} })

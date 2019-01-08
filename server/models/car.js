@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var uri = 'mongodb://username:password@hostname:port/databasename';
-uri = "mongodb://localhost/list";
+uri = "mongodb://localhost/car";
 var db = mongoose.connection;
  
 mongoose.Promise = global.Promise;  
@@ -13,7 +13,7 @@ db.on('error', function callback() {
 });
  
   //创建模式和模型
-  console.log('connected!');
+  console.log('Connected!');
   const CarSchema = mongoose.Schema({
     carId: Number,
     title:String,
